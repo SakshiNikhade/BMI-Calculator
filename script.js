@@ -1,4 +1,17 @@
 
+const BMI_HEADS = document.querySelectorAll('.bmi-head');
+const BMI_USC = document.getElementById('bmi-usc');
+const BMI_SI = document.getElementById('bmi-si');
+const CALC_BTN = document.getElementById('calc-btn');
+const CLR_BTN = document.getElementById('clr-btn');
+let activeForm;
+
+// event listeners
+window.addEventListener('DOMContentLoaded', () => {
+    BMI_USC.classList.add('show-bmi');
+    activeForm = "bmi-usc";
+});
+
 function onlyOne(checkbox) {
     var checkboxes = document.getElementsByName('Gender')
     checkboxes.forEach((item) => {
@@ -53,17 +66,17 @@ if(Age=="" || isNaN(Age) || Age<=1 || Age>120){
             result.innerHTML = 'Mild Thinness : ' + bmi;
         }
         else if(bmi >= 18.5 && bmi <25){
-            result.innerHTML = 'Normal : ' + bmi;
+            result.innerHTML = 'Your BMI  : ' + bmi;
         }
         else if(bmi >= 25 && bmi <30){
-            result.innerHTML = 'OverWeight : ' + bmi;
+            result.innerHTML = 'Your BMI  : ' + bmi;
         }else if(bmi >= 30 && bmi <35){
-            result.innerHTML = 'Obese class I : ' + bmi;
+            result.innerHTML = 'Your BMI  : ' + bmi;
         }else if(bmi >= 35 && bmi <=40){
-            result.innerHTML = 'Obese class II : ' + bmi;
+            result.innerHTML = 'Your BMI  : ' + bmi;
         }
         else if(bmi > 40 ){
-            result.innerHTML = 'Obese class III : ' + bmi;
+            result.innerHTML = 'Your BMI : ' + bmi;
         }
         else{
             result.innerHTML = 'Over weight : ' + bmi;
